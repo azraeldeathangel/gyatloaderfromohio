@@ -6,13 +6,6 @@
 #define info(msg, ...) printf("[*] " msg "\n", ##__VA_ARGS__)
 #define warn(msg, ...) printf("[-] " msg "\n", ##__VA_ARGS__)
 
-void xor_decrypt(unsigned char* shellcode, size_t shellcode_size, unsigned char* key, size_t key_size) {
-    // Simple XOR decryption logic (you can add your own here)
-    for (size_t i = 0; i < shellcode_size; i++) {
-        shellcode[i] ^= key[i % key_size];
-    }
-}
-
 int main() {
     unsigned char shellcode[] = "shellcode";
 
